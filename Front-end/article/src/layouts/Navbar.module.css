@@ -1,0 +1,17 @@
+.header {
+    height: 15vh;
+    width: 100vw;
+    background-color: #222222;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.headerOnDashboard {
+    height: 15vh;
+    width: 100vw;
+    background-color: #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,12 @@
+.dashLogo {
+    height: 70%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.dashLogo p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
