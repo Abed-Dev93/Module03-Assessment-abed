@@ -1,13 +1,16 @@
 import './App.css'
+import AppRoutes from '../src/routes/AppRoutes'
+import { BrowserRouter } from 'react-router-dom'
 import Navbar from './layouts/Navbar'
 
 function App() {
 
-  const isOnDashboard = false
-
   return (
     <div className="App">
-        <Navbar isOnDashboard={isOnDashboard} />
+      <BrowserRouter>
+        <Navbar />
+        <AppRoutes />
+      </BrowserRouter>
     </div>
   );
 }

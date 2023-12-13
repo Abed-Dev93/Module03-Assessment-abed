@@ -1,12 +1,49 @@
+.dashboardHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .dashLogo {
     height: 70%;
     width: 20%;
     display: flex;
     align-items: center;
+    gap: 0.1rem;
+    margin-left: 2rem;
 }
 
-.dashLogo p {
+.dashLogoIcon {
+    color: #fff;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.dashTitle {
     font-size: 1.5rem;
     font-weight: 600;
     color: #fff;
+}
+
+.navList{
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 2rem;
+}
+
+.navListItem {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    list-style: none;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+.navListItem:hover {
+    border-bottom: 1px solid #fa2a2a;
 }
