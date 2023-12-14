@@ -1,8 +1,12 @@
 import React from 'react'
 import style from './NavItems.module.css'
 import { MdOutlineDashboard } from "react-icons/md"
+import { Link } from 'react-router-dom'
 
 const NavItems = ({ isOnDashboard, isOnSingleArticle }) => {
+
+  const navListItemStyle = { textDecoration: 'none', color: 'inherit', fontWeight: 'inherit' }
+
   return (
     <>
       {isOnDashboard ?
@@ -12,18 +16,18 @@ const NavItems = ({ isOnDashboard, isOnSingleArticle }) => {
             <p className={style.dashTitle}>Dashboard</p>
           </div>
           <ul className={style.navList}>
-            <li className={style.navListItem}>Add</li>
-            <li className={style.navListItem}>Edit</li>
-            <li className={style.navListItem}>Remove</li>
-            <li className={style.navListItem}>Back To Articles</li>
+            <li className={style.navListItem}><Link to='/createArticle' style={navListItemStyle}>Add</Link></li>
+            <li className={style.navListItem}><Link to='/updateArticle' style={navListItemStyle}>Edit</Link></li>
+            <li className={style.navListItem}><Link to='/deleteArticle' style={navListItemStyle}>Remove</Link></li>
+            <li className={style.navListItem}><Link to='/allArticles' style={navListItemStyle}>Back To Articles</Link></li>
           </ul> </div> :
         isOnSingleArticle ?
           <ul className={style.navList}>
-            <li className={style.navListItem}>Back To Articles</li>
-            <li className={style.navListItem}>Go To Dashboard</li>
+            <li className={style.navListItem}><Link to='/allArticles' style={navListItemStyle}>Back To Articles</Link></li>
+            <li className={style.navListItem}><Link to='/createArticle' style={navListItemStyle}>Go To Dashboard</Link></li>
           </ul> :
           <ul className={style.navList}>
-            <li className={style.navListItem}>Go To Dashboard</li>
+            <li className={style.navListItem}><Link to='/createArticle' style={navListItemStyle}>Go To Dashboard</Link></li>
           </ul>
       }
     </>
