@@ -10,7 +10,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path='/allArticles' element={<AllArticles />} />
-      <Route path='/oneArticle' element={<OneArticle />} />
+      <Route path='/oneArticle/:id' element={<OneArticle />} />
       <Route path='/createArticle' element={<CreateArticle />} />
       <Route path='/updateArticle' element={<UpdateArticle />} />
       <Route path='/deleteArticle' element={<DeleteArticle />} />
